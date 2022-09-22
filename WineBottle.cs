@@ -21,9 +21,4 @@ public class WineBottle : Bottle
         : base(name, quantity, price, vat, maxCapacity)
     {
     }
-
-    public WineBottle(string name, int quantity, string description, decimal price, float vat, float maxCapacity)
-        : base(name, quantity, description, price, vat, maxCapacity)
-    {
-    }
 }

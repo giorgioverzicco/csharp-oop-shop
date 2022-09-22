@@ -34,28 +34,27 @@ public abstract class Bottle
     protected Bottle(string name, decimal price, float vat) 
         : base(name, price, vat)
     {
+        MaxCapacity = 1.5f;
+        Capacity = MaxCapacity;
     }
 
     protected Bottle(string name, int quantity, decimal price, float vat) 
         : base(name, quantity, price, vat)
     {
+        MaxCapacity = 1.5f;
+        Capacity = MaxCapacity;
+    }
+
+    protected Bottle(string name, int quantity, decimal price, float vat, float maxCapacity)
+        : base(name, quantity, price, vat)
+    {
+        MaxCapacity = maxCapacity;
+        Capacity = maxCapacity;
     }
 
     protected Bottle(string name, int quantity, string description, decimal price, float vat) 
         : base(name, quantity, description, price, vat)
     {
-    }
-    
-    protected Bottle(string name, int quantity, decimal price, float vat, float maxCapacity)
-        : base(name, quantity, price, vat)
-    {
-        MaxCapacity = maxCapacity;
-    }
-    
-    protected Bottle(string name, int quantity, string description, decimal price, float vat, float maxCapacity)
-        : base(name, quantity, description, price, vat)
-    {
-        MaxCapacity = maxCapacity;
     }
 
     public void Drink(float quantity)

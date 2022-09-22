@@ -22,11 +22,6 @@ public class WaterBottle : Bottle, IRefillable
     {
     }
 
-    public WaterBottle(string name, int quantity, string description, decimal price, float vat, float maxCapacity) 
-        : base(name, quantity, description, price, vat, maxCapacity)
-    {
-    }
-
     public void Refill(float quantity)
     {
         if (Capacity >= MaxCapacity)
